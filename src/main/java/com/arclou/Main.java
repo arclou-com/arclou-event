@@ -25,13 +25,14 @@ public class Main {
                 option = sc.nextInt();
                 if (option <= 0 || option > 4) {
                     System.out.println("Erro: As opções são somente entre 1 a 4.");
+                } else if (option != 4) {
+                    System.out.println("Em construção...");
                 }
             } else {
                 String invalidInput = sc.next();
                 System.out.println("Erro: '" + invalidInput + "' não é uma das opções acima.");
             }
 
-            System.out.println("Em construção...");
         } while (option != 4);
 
         System.out.println("Obrigado!!!");
