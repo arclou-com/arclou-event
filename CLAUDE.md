@@ -205,9 +205,11 @@ Objetivo:
 - bypass administrativo minimizado.
 
 IMPORTANTE:
-Se Claude estiver usando a mesma identidade/token GitHub do autor do PR, não configure aprovação independente obrigatória se isso tornar o merge impossível.
+O repositório usa duas identidades GitHub reais e distintas: o dev humano abre PRs como `vinicius3516` (colaborador com permissão Write), e o Tech Lead opera como `arclouai`. Por isso, a partir de 2026-09-11, o ruleset de `main` exige 1 aprovação obrigatória antes do merge (`required_approving_review_count: 1`), e nenhum ator pode contornar o ruleset (`bypass_actors: []`, `current_user_can_bypass: never`).
 
-Ainda assim, faça review real e deixe comentários no PR.
+Isso significa que todo PR do dev precisa de aprovação real do Tech Lead — não é mais apenas PR + CI + conversas resolvidas. Se no futuro só existir uma identidade novamente, volte à regra antiga: não configure aprovação obrigatória que torne o merge impossível.
+
+Faça review real e deixe comentários no PR antes de aprovar.
 
 ## 10. Estratégia de branches
 
