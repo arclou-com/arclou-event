@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[] event = new String[3];
+        String[][] event = new String[10][3];
+        int count = 0;
         int option = 0;
 
         do {
@@ -27,20 +28,21 @@ public class Main {
                 sc.nextLine();
                 if (option <= 0 || option > 4) {
                     System.out.println("Erro: As opções são somente entre 1 a 4.");
-                } else if (option > 1) {
-                    System.out.println("Em construção...");
-                } else {
+                } else if (option == 1){
                     System.out.println("Informe os dados do evento:");
                     System.out.print("Nome: ");
-                    event[0] = sc.nextLine();
+                    event[count][0] = sc.nextLine();
 
                     System.out.print("Data: ");
-                    event[1] = sc.nextLine();
+                    event[count][1] = sc.nextLine();
 
                     System.out.print("Local: ");
-                    event[2] = sc.nextLine();
+                    event[count][2] = sc.nextLine();
 
-                    System.out.println("Evento registrado com sucesso: " + event[0] + " | " + event[1] + " | " + event[2]);
+                    System.out.println("Evento registrado com sucesso: " + event[count][0] + " | " + event[count][1] + " | " + event[count][2]);
+                    count++;
+                } else if (option != 4){
+                    System.out.println("Em construção...");
                 }
             } else {
                 String invalidInput = sc.next();
